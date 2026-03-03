@@ -8,7 +8,7 @@ To construct and evaluate an optimal portfolio of 30 Indian equities using Moder
 ## Market Universe
 30 Large-Cap Indian Equities (NSE)
 
-Benchmark: NIFTYBEES.NS (NIFTY 50 ETF)  
+Benchmark: ^NSEI (NIFTY 50 Index)
 Risk-Free Rate: Indian 10-Year Government Bond  
 
 ---
