@@ -1,21 +1,21 @@
 Monte Carlo Portfolio Optimization – Indian Equity Markets
 Objective
 
-To construct and evaluate an optimal portfolio of 30 Indian large-cap equities using Modern Portfolio Theory (MPT), Monte Carlo simulation, and advanced risk metrics.
+To construct and evaluate an optimal portfolio of 30 Indian large-cap equities using Modern Portfolio Theory (MPT), Monte Carlo simulation, and risk-adjusted performance metrics.
 
-The objective is to identify the portfolio that maximizes the Sharpe Ratio while managing volatility, beta exposure, and drawdown risk.
+The objective is to identify the portfolio that maximizes the Sharpe Ratio while controlling volatility, beta exposure, and drawdown risk.
 
 Methodology
 
-Collected historical adjusted closing price data using yfinance
+Historical adjusted closing price data collected using yfinance
 
-Computed daily log returns
+Daily log returns computed
 
-Annualized returns and volatility using 252 trading days
+Returns and volatility annualized using 252 trading days
 
-Generated 50,000 random portfolios via Monte Carlo simulation
+50,000 random portfolios generated using Monte Carlo simulation
 
-Calculated the following metrics for each portfolio:
+For each portfolio, the following were calculated:
 
 Expected Annual Return
 
@@ -29,35 +29,37 @@ Beta vs NIFTY 50
 
 Maximum Drawdown
 
-Identified the Maximum Sharpe Ratio portfolio
+The Maximum Sharpe Ratio portfolio was selected
 
-Backtested cumulative performance against NIFTY 50 (^NSEI)
+Performance backtested against NIFTY 50 (^NSEI)
 
 Key Results
 
-Maximum Sharpe Ratio: approximately 0.87–1.00
+Maximum Sharpe Ratio: approximately 0.87 – 1.00
 
-Expected Annual Return: approximately 21–24%
+Expected Annual Return: approximately 21% – 24%
 
-Annual Volatility: approximately 16–17%
+Annual Volatility: approximately 16% – 17%
 
 Beta vs NIFTY 50: approximately 0.95
 
-Maximum Drawdown: approximately 35–36%
+Maximum Drawdown: approximately 35% – 36%
 
-The optimized portfolio demonstrated superior risk-adjusted performance relative to the benchmark over the evaluation period.
+The optimized portfolio demonstrated superior risk-adjusted performance relative to the benchmark during the evaluation period.
 
 Project Structure
-Monte-Carlo-Portfolio-Optimization/
+
+Monte-Carlo-Portfolio-Optimization
 │
-├── src/
-│   └── portfolio_optimization.py
+├── src
+│ └── portfolio_optimization.py
 │
-├── outputs/
-│   └── efficient_frontier.png
+├── outputs
+│ └── efficient_frontier.png
 │
 ├── requirements.txt
 └── README.md
+
 Concepts Applied
 
 Modern Portfolio Theory (Markowitz Framework)
@@ -90,25 +92,18 @@ yfinance
 
 How to Run
 
-Clone the repository:
+Clone the repository
 
-git clone https://github.com/your-username/Monte-Carlo-Portfolio-Optimization.git
-
-Install dependencies:
-
+Install dependencies using:
 pip install -r requirements.txt
 
-Run the script:
-
+Run the script using:
 python src/portfolio_optimization.py
+
 Benchmark and Assumptions
 
 Benchmark: NIFTY 50 Index (^NSEI)
 
 Risk-Free Rate: Indian 10-Year Government Bond
 
-Trading Days Assumed per Year: 252
-
-Outcome
-
-This project demonstrates practical implementation of quantitative portfolio optimization techniques using real-world Indian equity market data. It reflects applied understanding of financial risk modeling, asset allocation, and performance evaluation.
+Trading Days per Year Assumed: 252
