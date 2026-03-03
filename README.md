@@ -9,6 +9,7 @@ To construct and evaluate an optimal portfolio of 30 Indian equities using Moder
 30 Large-Cap Indian Equities (NSE)
 
 Benchmark: ^NSEI (NIFTY 50 Index)
+
 Risk-Free Rate: Indian 10-Year Government Bond  
 
 ---
