@@ -1,74 +1,114 @@
-# Monte Carlo Portfolio Optimization – Indian Equity Markets
+Monte Carlo Portfolio Optimization – Indian Equity Markets
+Objective
 
-## Objective
-To construct and evaluate an optimal portfolio of 30 Indian equities using Modern Portfolio Theory, Monte Carlo simulation, and advanced risk metrics.
+To construct and evaluate an optimal portfolio of 30 Indian large-cap equities using Modern Portfolio Theory (MPT), Monte Carlo simulation, and advanced risk metrics.
 
----
+The objective is to identify the portfolio that maximizes the Sharpe Ratio while managing volatility, beta exposure, and drawdown risk.
 
-## Market Universe
-30 Large-Cap Indian Equities (NSE)
+Methodology
 
-Benchmark: ^NSEI (NIFTY 50 Index)
+Collected historical adjusted closing price data using yfinance
 
-Risk-Free Rate: Indian 10-Year Government Bond  
+Computed daily log returns
 
----
+Annualized returns and volatility using 252 trading days
 
-## Methodology
+Generated 50,000 random portfolios via Monte Carlo simulation
 
-1. Download historical price data (Yahoo Finance)
-2. Compute daily returns
-3. Annualize returns and covariance matrix
-4. Run 50,000 Monte Carlo simulations
-5. Identify:
-   - Maximum Sharpe Ratio Portfolio
-   - Minimum Volatility Portfolio
-6. Plot:
-   - Efficient Frontier
-   - Capital Market Line
-7. Backtest optimal portfolio vs equal-weight portfolio
-8. Compute advanced risk metrics
+Calculated the following metrics for each portfolio:
 
----
+Expected Annual Return
 
-## Key Results
+Annual Volatility
 
-| Metric | Value |
-|--------|-------|
-| Expected Annual Return | 21.6% |
-| Annual Volatility | 16.7% |
-| Sharpe Ratio | 0.87 |
-| Sortino Ratio | 1.08 |
-| Beta vs NIFTY | 0.96 |
-| Maximum Drawdown | -36% |
+Sharpe Ratio
 
-The optimized portfolio achieved higher risk-adjusted returns than both the equal-weight portfolio and the NIFTY 50 benchmark.
+Sortino Ratio
 
-## Advanced Risk & Performance Metrics
+Beta vs NIFTY 50
 
-- Sharpe Ratio
-- Sortino Ratio
-- Portfolio Beta vs NIFTY
-- Rolling Volatility (252-day)
-- Maximum Drawdown
-- Comparison vs NIFTY ETF (NIFTYBEES)
+Maximum Drawdown
 
----
+Identified the Maximum Sharpe Ratio portfolio
 
-## Key Insights
+Backtested cumulative performance against NIFTY 50 (^NSEI)
 
-This project demonstrates:
-- Risk-adjusted return optimization
-- Diversification across Indian equities
-- Downside risk measurement
-- Market-relative performance evaluation
-- Quantitative portfolio construction techniques
+Key Results
 
----
+Maximum Sharpe Ratio: approximately 0.87–1.00
 
-## Tools Used
-- Python
-- NumPy
-- Pandas
-- Matplotlib
-- yFinance
+Expected Annual Return: approximately 21–24%
+
+Annual Volatility: approximately 16–17%
+
+Beta vs NIFTY 50: approximately 0.95
+
+Maximum Drawdown: approximately 35–36%
+
+The optimized portfolio demonstrated superior risk-adjusted performance relative to the benchmark over the evaluation period.
+
+Project Structure
+Monte-Carlo-Portfolio-Optimization/
+│
+├── src/
+│   └── portfolio_optimization.py
+│
+├── outputs/
+│   └── efficient_frontier.png
+│
+├── requirements.txt
+└── README.md
+Concepts Applied
+
+Modern Portfolio Theory (Markowitz Framework)
+
+Efficient Frontier
+
+Sharpe Ratio Optimization
+
+Monte Carlo Simulation
+
+Risk-Adjusted Performance Measurement
+
+Beta Estimation
+
+Drawdown Analysis
+
+Portfolio Backtesting
+
+Technologies Used
+
+Python
+
+NumPy
+
+Pandas
+
+Matplotlib
+
+yfinance
+
+How to Run
+
+Clone the repository:
+
+git clone https://github.com/your-username/Monte-Carlo-Portfolio-Optimization.git
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Run the script:
+
+python src/portfolio_optimization.py
+Benchmark and Assumptions
+
+Benchmark: NIFTY 50 Index (^NSEI)
+
+Risk-Free Rate: Indian 10-Year Government Bond
+
+Trading Days Assumed per Year: 252
+
+Outcome
+
+This project demonstrates practical implementation of quantitative portfolio optimization techniques using real-world Indian equity market data. It reflects applied understanding of financial risk modeling, asset allocation, and performance evaluation.
