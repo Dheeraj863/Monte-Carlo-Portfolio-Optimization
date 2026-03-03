@@ -31,6 +31,19 @@ Risk-Free Rate: Indian 10-Year Government Bond
 
 ---
 
+## Key Results
+
+| Metric | Value |
+|--------|-------|
+| Expected Annual Return | 21.6% |
+| Annual Volatility | 16.7% |
+| Sharpe Ratio | 0.87 |
+| Sortino Ratio | 1.08 |
+| Beta vs NIFTY | 0.96 |
+| Maximum Drawdown | -36% |
+
+The optimized portfolio achieved higher risk-adjusted returns than both the equal-weight portfolio and the NIFTY 50 benchmark.
+
 ## Advanced Risk & Performance Metrics
 
 - Sharpe Ratio
